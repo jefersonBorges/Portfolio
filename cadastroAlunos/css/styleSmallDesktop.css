@@ -1,0 +1,121 @@
+html, body{
+    margin: 0;
+    width: 100%;
+}
+body{
+    background: url(/img/abstract-g6be5bff7b_1920.jpg) rgb(46, 46, 46) no-repeat fixed center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerBotoes{
+    display: flex;
+    justify-content: space-evenly;
+}
+label, .campos{
+    display: block;
+}
+.botoes{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(46 46 46 / 80%);
+    border: solid 2px rgb(29 86 212);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+    transition: transform 0.5s;
+}
+.botoes:hover{
+    transform: scale(1.1);
+}
+.botoes:focus{
+    box-shadow: rgb(29 86 212) 0px 0px 8px 7px;
+}
+#botaoAlterar{
+    display: none;
+}
+legend{
+    float: left;
+    margin-bottom: 20px;
+}
+#cadastroAlunos fieldset{
+    border-radius: 20px;
+    background-color: rgba(46, 46, 46, 0.8);
+    padding: 30px;
+    box-shadow: rgb(29 86 212) 2px 2px 8px 4px;
+    border: 1px solid rgb(46, 46, 46);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+.titulo{
+    font-size: 26px;
+    font-weight: 700;
+}
+label{
+    margin: 5px;
+    font-size: 16px;
+}
+input[type=text], input[type=date], input[type=number], input[type=tel] {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border-radius: 10px;
+    border: solid 2px rgb(29 86 212);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(46 46 46 / 80%);
+    transition: 0.5s;
+}
+input:focus{
+    box-shadow: rgb(29 86 212) 0px 0px 8px 7px;
+}
+form {
+    min-width: 300px;
+}
+table{
+    min-width: 900px;
+    height: fit-content;
+    margin-top: 30px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(29 86 212);
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgb(46, 46, 46);
+    box-shadow: rgb(29 86 212) 2px 2px 8px 4px;
+}
+tr, td, th{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(46, 46, 46);
+}
+tr:nth-child(even){
+    background-color: rgba(46, 46, 46, 0.9);
+}
+tr:nth-child(odd){
+    background-color: rgb(46, 46, 46);
+}
+ion-icon{
+    font-size: 32px;
+    color:white
+}
+.edicao ion-icon{
+    font-size: 16px;
+}
+.erroPreenchimento{
+    font-style: italic;
+    color: red;
+}
+#erroNome, #erroTelefone, #erroData, #erroNota{
+    display: none;
+}

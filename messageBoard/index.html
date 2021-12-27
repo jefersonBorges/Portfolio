@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link  rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&display=swap">
+    <script src="script/script.js"></script>
+    <title>Message Board</title>
+</head>
+<body>
+    <div class="generalContainer">
+        <div class="headerContainer">
+            <h1>Message Board</h1>
+        </div>
+        <div class="sectionContainer">
+            <div class="formsContainer">
+                <form id="leaveMessage">
+                    <fieldset>
+                        <legend>Leave Your Message!</legend>
+                        <textarea name="message" id="message" cols="20" rows="5" placeholder="Write your message here..."></textarea>
+                        <label for="user">Message From:</label>
+                        <select name="user" id="user"></select>
+                        <button type="button" onclick="sendMessage()">Send</button>
+                    </fieldset>
+                </form>
+                <form id="signNewUser">
+                    <fieldset>
+                        <legend>New User? Sign here!</legend>
+                        <input type="text" id="newUser" name="newUser" placeholder="What's your name?" maxlength="8">
+                        <label for="newUserColor">Choose your color:</label>
+                        <input type="color" id="newUserColor" name="newUserColor">
+                        <button type="button" onclick="createUser()">Create User</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="boardContainer" id="board"></div>
+            <div class="usersListContainer">
+                <article>
+                    <strong>Active Users List</strong>
+                    <ul id="userList"></ul>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

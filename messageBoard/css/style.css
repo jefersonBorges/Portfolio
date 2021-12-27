@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kalam', cursive;
+}
+html, body{
+    width: 100%;
+}
+body{
+    background: rgb(250, 250, 250);
+    border: #939393 groove 20px;
+}
+.generalContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.headerContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 10%;
+    padding: 10px;
+    border-bottom: black dotted 5px;
+    font-weight: 700;
+}
+.sectionContainer{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 90%;
+}
+.formsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    padding: 20px;
+    border-right: black dotted 5px;
+}
+#leaveMessage{
+    width: 100%;
+    height: 50%;
+}
+#signNewUser{
+    width: 100%;
+    height: 45%;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background: rgba(250 250 250 / 10%);
+    border: none;
+    border-radius: 20px;
+    box-shadow:black inset 0px 0px 9px 3px;
+}
+legend{
+    float: left;
+}
+legend, label{
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+textarea, input[type = text] , input[type = color], select {
+    margin-bottom: 10px;
+    width: 100%;
+}
+textarea{
+    resize: none;
+}
+.boardContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-flow: row wrap;
+    width: 65%;
+    padding-bottom: 2%;
+}
+.messageContainer{
+    margin: 4% 0 0 4%;
+    max-width: 20%;
+    height: fit-content;
+    padding: 20px;
+    box-shadow:black 0px 0px 9px 3px;
+    border-radius: 20px;
+}
+.messageContainer textarea{
+    margin: 0;
+    height: fit-content;
+    background: rgba(250 250 250 / 10%);
+    border: none;
+    outline: none;
+}
+.messageText{
+    font-weight: 300;
+    font-size: 12pt;
+}
+.usersListContainer{
+    width: 10%;
+    border-left: black dotted 5px;
+    padding: 20px;
+}
+ul{
+    padding: 0 0 0 10px;
+}
+article{
+    width: 100%;
+}

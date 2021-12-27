@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" media="screen and (max-width:1199px)" href="css/styleSmallDesktop.css">
+    <link rel="stylesheet" media="screen and (min-width:1200px)" href="css/styleDesktop.css">
+    <link rel="stylesheet" media="print" href="css/stylePrint.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,400;1,700&display=swap">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <title>Página de Cadastro de Alunos</title>
+</head>
+<body onload="verificaTamanhoTela()">
+    <div class="container">
+        <form id="cadastroAlunos" name="cadastroAlunos">
+            <fieldset>
+                <legend class="titulo" id="legendaFormularioCadastro">Cadastro de Alunos</legend>
+                <label class="campos" for="nome">Nome do Aluno</label>
+                <input class="campos" title="Nome" required type="text" name="nome" id="nome" placeholder="Nome completo do aluno">
+                <span class="erroPreenchimento" id="erroNome" name="erroNome">Mensagem de erro</span>
+                <label class="campos" for="telefone">Telefone Celular do Aluno</label>
+                <input class="campos" title="Telefone" required type="tel" name="telefone" id="telefone" pattern="[0-9]{11}" maxlength="11" placeholder="ddd + numero com 11 digitos">
+                <span class="erroPreenchimento" id="erroTelefone" name="erroTelefone">Mensagem de erro</span>
+                <label class="campos" for="nascimento">Data de Nascimento</label>
+                <input class="campos" title="Data de Nascimento" required type="date" name="nascimento" id="nascimento">
+                <span class="erroPreenchimento" id="erroData" name="erroData">Mensagem de erro</span>
+                <label class="campos" for="nota">Nota Final</label>
+                <input class="campos" title="Nota Final" required type="number" name="notaFinal" id="notaFinal" step="0.01" min="0.00" max="10.00" placeholder="10.00">
+                <span class="erroPreenchimento" id="erroNota" name="erroNota">Mensagem de erro</span>
+                <div class="containerBotoes">
+                    <button class="botoes" type="submit" id="botaoCadastrar" name="botaoCadastrar" value="Cadastrar" onclick="cadastrar()"><ion-icon name="save"></ion-icon></button>
+                    <button class="botoes" type="submit" id="botaoAlterar" name="botaoAlterar" value="Alterar" onclick="alterar()"><ion-icon name="checkbox-outline"></ion-icon></button>
+                    <button class="botoes" type="reset" id="botaoLimpar" name="botaoLimpar" ><ion-icon name="close"></ion-icon></button>
+                    <button class="botoes" id="botaoImprimir" name="botaoImprimir" onclick="print()"><ion-icon name="print"></ion-icon></button>
+                </div>
+            </fieldset>
+        </form>
+        <table id="tabelaCadastro">
+            <thead>
+                <tr >
+                    <th colspan="9" class="titulo">
+                        Tabela Cadastral
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Ação
+                    </th>
+                    <th>
+                        Codigo
+                    </th>
+                    <th>
+                        Cadastrado em
+                    </th>
+                    <th>
+                        Última alteração
+                    </th>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Telefone
+                    </th>
+                    <th>
+                        Nascimento
+                    </th>
+                    <th>
+                        Nota final
+                    </th>
+                    <th>
+                        Situação
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+            <tfoot id="rodapeTabela"></tfoot>
+        </table>
+    </div>
+</body>
+</html>
