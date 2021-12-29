@@ -3,7 +3,7 @@ html, body{
     width: 100%;
 }
 body{
-    background: url(/img/abstract-g6be5bff7b_1920.jpg) rgb(46, 46, 46) no-repeat fixed center;
+    background: url(/cadastroAlunos/img/abstract-g6be5bff7b_1920.jpg) rgb(46, 46, 46) no-repeat fixed center;
 }
 .container{
     display: flex;
