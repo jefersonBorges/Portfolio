@@ -1,0 +1,1 @@
+A simple calculator using Javascript Array Methods, CSS and HTML.
