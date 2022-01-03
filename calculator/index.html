@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js"></script>
+    <title>Calculator</title>
+</head>
+<body onload="initialize()">
+    <div class="calculatorContainer">
+        <div class="frameContainer">
+            <div class="screen" id="screen"></div>
+            <div class="button-function">
+                <button type="button" onclick="typeOperator(this.innerHTML)">+</button><!--plus ok-->
+                <button type="button" onclick="typeOperator(this.innerHTML)">-</button><!--minus-->
+                <button type="button" onclick="typeOperator(this.innerHTML)">x</button><!--multiplus-->
+                <button type="button" onclick="typeOperator(this.innerHTML)">/</button><!--division-->
+                <button type="button" onclick="typeOperator(this.innerHTML)">%</button><!--percentage-->
+                <button type="button" onclick="typeOperator(this.innerHTML)">±</button><!--plus and minus-->
+                <button type="button" onclick="typeOperator(this.innerHTML)">(</button><!--(Parenthesis open) -->
+                <button type="button" onclick="typeOperator(this.innerHTML)">)</button><!--(Parenthesis close) -->
+                <button type="button">←</button><!--left-arrow-->
+                <button type="button">&#61;</button><!--equals-->
+                <!--
+                    <button type="button">Exp</button> (exponential)
+                    <button type="button">x<sup>y</sup></button> (Y to the power Y)
+                    <button type="button"><sup>x</sup>&#8730;</button> (x root)
+                    <button type="button"><sup>2</sup>&#8730;</button> (sqr)
+                    <button type="button"><sup>3</sup>&#8730;</button>(3root)
+                    <button type="button"><sup>4</sup>&#8730;</button> (4root)            
+                    
+                    <button type="button">Log</button> (base 10 logarithim)
+                    <button type="button">ln</button> (natural logarithm)
+                    <button type="button">e<sup>x</sup></button> (Exponentiation)
+                    <button type="button">rad</button> (radian)
+                    <button type="button">deg</button> (degrees)
+                    <button type="button">Sin</button> (sin function)
+                    <button type="button">Sin<sup>-1</sup></button> (inverse sin function)
+                    <button type="button">Cos</button> (Cos function)
+                    <button type="button">Cos<sup>-1</sup></button> (inverse Cos function)
+                    <button type="button">Tan</button> (Tan function)
+                    <button type="button">Tan<sup>-1</sup></button> (inverse Tan function)
+                -->
+                
+                
+            </div>
+            <div class="button-number">
+                <button type="button" onclick="typeNumber(this.innerHTML)">.</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">0</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">1</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">2</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">3</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">4</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">5</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">6</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">7</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">8</button>
+                <button type="button" onclick="typeNumber(this.innerHTML)">9</button>
+                <!--
+                    <button type="button">&pi;</button>(pi)
+                    <button type="button">e</button>(Euler's constant
+                -->
+            </div>  
+        </div>
+    </div>
+    
+</body>
+</html>
