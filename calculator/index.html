@@ -13,16 +13,18 @@
         <div class="frameContainer">
             <div class="screen" id="screen"></div>
             <div class="button-function">
-                <button type="button" onclick="typeOperator(this.innerHTML)">+</button><!--plus ok-->
-                <button type="button" onclick="typeOperator(this.innerHTML)">-</button><!--minus-->
-                <button type="button" onclick="typeOperator(this.innerHTML)">x</button><!--multiplus-->
-                <button type="button" onclick="typeOperator(this.innerHTML)">/</button><!--division-->
-                <button type="button" onclick="typeOperator(this.innerHTML)">%</button><!--percentage-->
-                <button type="button" onclick="typeOperator(this.innerHTML)">±</button><!--plus and minus-->
-                <button type="button" onclick="typeOperator(this.innerHTML)">(</button><!--(Parenthesis open) -->
-                <button type="button" onclick="typeOperator(this.innerHTML)">)</button><!--(Parenthesis close) -->
+                <button type="button" onclick="clearAll()">CA</button><!--Clear All-->
+                <button type="button" onclick="digit('+')">+</button><!--plus ok-->
+                <button type="button" onclick="digit('-')">-</button><!--minus-->
+                <button type="button" onclick="digit('*')">x</button><!--multiplus-->
+                <button type="button" onclick="digit('/')">÷</button><!--division-->
+                <button type="button" onclick="digit('%')">%</button><!--percentage-->
+                <button type="button" onclick="digit('*-1')">±</button><!--plus and minus-->
+                <button type="button" onclick="digit('(')">(</button><!--(Parenthesis open) -->
+                <button type="button" onclick="digit(')')">)</button><!--(Parenthesis close) -->
                 <button type="button">←</button><!--left-arrow-->
-                <button type="button">&#61;</button><!--equals-->
+                <button type="button" onclick="equals()">=</button><!--equals-->
+
                 <!--
                     <button type="button">Exp</button> (exponential)
                     <button type="button">x<sup>y</sup></button> (Y to the power Y)
@@ -47,21 +49,19 @@
                 
             </div>
             <div class="button-number">
-                <button type="button" onclick="typeNumber(this.innerHTML)">.</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">0</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">1</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">2</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">3</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">4</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">5</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">6</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">7</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">8</button>
-                <button type="button" onclick="typeNumber(this.innerHTML)">9</button>
-                <!--
-                    <button type="button">&pi;</button>(pi)
-                    <button type="button">e</button>(Euler's constant
-                -->
+                <button type="button" onclick="digit('.')">.</button>
+                <button type="button" onclick="digit('0')">0</button>
+                <button type="button" onclick="digit('1')">1</button>
+                <button type="button" onclick="digit('2')">2</button>
+                <button type="button" onclick="digit('3')">3</button>
+                <button type="button" onclick="digit('4')">4</button>
+                <button type="button" onclick="digit('5')">5</button>
+                <button type="button" onclick="digit('6')">6</button>
+                <button type="button" onclick="digit('7')">7</button>
+                <button type="button" onclick="digit('8')">8</button>
+                <button type="button" onclick="digit('9')">9</button>
+                <button type="button" onclick="digit('Math.PI')">&pi;</button>
+                <button type="button" onclick="digit('Math.E')">e</button>
             </div>  
         </div>
     </div>
