@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="script/script.js"></script>
@@ -13,39 +12,38 @@
         <div class="frameContainer">
             <div class="screen" id="screen"></div>
             <div class="button-function">
-                <button type="button" onclick="clearAll()">CA</button><!--Clear All-->
-                <button type="button" onclick="digit('+')">+</button><!--plus ok-->
-                <button type="button" onclick="digit('-')">-</button><!--minus-->
-                <button type="button" onclick="digit('*')">x</button><!--multiplus-->
-                <button type="button" onclick="digit('/')">÷</button><!--division-->
-                <button type="button" onclick="digit('%')">%</button><!--percentage-->
-                <button type="button" onclick="digit('*-1')">±</button><!--plus and minus-->
-                <button type="button" onclick="digit('(')">(</button><!--(Parenthesis open) -->
-                <button type="button" onclick="digit(')')">)</button><!--(Parenthesis close) -->
-                <button type="button">←</button><!--left-arrow-->
-                <button type="button" onclick="equals()">=</button><!--equals-->
+                <button type="button" onclick="clearAll()">CA</button>
+                <button type="button" onclick="digit('+')">+</button>
+                <button type="button" onclick="digit('-')">-</button>
+                <button type="button" onclick="digit('*')">x</button>
+                <button type="button" onclick="digit('/')">÷</button>
+                <button type="button" onclick="equals()">=</button>
 
                 <!--
+                    <button type="button"onclick="digit('^')">Exp</button>
+                    <button type="button" onclick="digit('%')">%</button>
+                    <button type="button" onclick="digit('*-1')">±</button>
+                    <button type="button" onclick="digit('(')">(</button>
+                    <button type="button" onclick="digit(')')">)</button>
+                    <button type="button">←</button>
                     <button type="button">Exp</button> (exponential)
                     <button type="button">x<sup>y</sup></button> (Y to the power Y)
                     <button type="button"><sup>x</sup>&#8730;</button> (x root)
                     <button type="button"><sup>2</sup>&#8730;</button> (sqr)
                     <button type="button"><sup>3</sup>&#8730;</button>(3root)
                     <button type="button"><sup>4</sup>&#8730;</button> (4root)            
-                    
-                    <button type="button">Log</button> (base 10 logarithim)
-                    <button type="button">ln</button> (natural logarithm)
-                    <button type="button">e<sup>x</sup></button> (Exponentiation)
-                    <button type="button">rad</button> (radian)
-                    <button type="button">deg</button> (degrees)
+                    <button type="button">Log</button>
+                    <button type="button">ln</button>
+                    <button type="button">e<sup>x</sup></button>
+                    <button type="button">rad</button>
+                    <button type="button">deg</button>
                     <button type="button">Sin</button> (sin function)
-                    <button type="button">Sin<sup>-1</sup></button> (inverse sin function)
+                    <button type="button">Sin<sup>-1</sup></button>
                     <button type="button">Cos</button> (Cos function)
-                    <button type="button">Cos<sup>-1</sup></button> (inverse Cos function)
-                    <button type="button">Tan</button> (Tan function)
-                    <button type="button">Tan<sup>-1</sup></button> (inverse Tan function)
+                    <button type="button">Cos<sup>-1</sup></button>
+                    <button type="button">Tan</button>
+                    <button type="button">Tan<sup>-1</sup></button>
                 -->
-                
                 
             </div>
             <div class="button-number">
@@ -60,8 +58,10 @@
                 <button type="button" onclick="digit('7')">7</button>
                 <button type="button" onclick="digit('8')">8</button>
                 <button type="button" onclick="digit('9')">9</button>
-                <button type="button" onclick="digit('Math.PI')">&pi;</button>
-                <button type="button" onclick="digit('Math.E')">e</button>
+                <!--
+                    <button type="button" onclick="digit('Math.PI')">&pi;</button>
+                    <button type="button" onclick="digit('Math.E')">e</button>
+                -->
             </div>  
         </div>
     </div>

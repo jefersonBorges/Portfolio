@@ -1,6 +1,7 @@
-
+/*Next: check for entry errors*/
 let screen = 0;
 let calc = [];
+let tempCalc = [];
 
 function initialize(){
     screen = document.getElementById("screen");
@@ -11,34 +12,19 @@ function digit(n){
     calc.push(n);
 }
 
+function updateArr(arr, result, initial, final){
+    arr.splice(initial, ( (final-initial)+1 ), result);
+} 
+
 function displayResult(result){
     screen.innerHTML = result;
-}
-
-/*
-    *revisar com o indexFider()
-*/
-function operatorFinder(n){
-    switch(n){
-        case '/':
-            return calc.indexOf(n);
-        case '*':
-            return calc.indexOf(n);
-        case '-':
-            return calc.indexOf(n);
-        case '+':
-            return calc.indexOf(n);
-    }
 }
 
 function typeFinder(n){
     switch(n){
         case '/':
-            return "operation";
         case '*':
-            return "operation";
         case '-':
-            return "operation";
         case '+':
             return "operation";
         default:
@@ -48,83 +34,110 @@ function typeFinder(n){
 
 function equals(){
 
-    let operatorIndex = null;
-
-    for(i=0; i < calc.length; i++){
-        if(typeFinder(calc[i]) == "operation"){
-
-            operatorIndex = operatorFinder(calc[i])
-        } 
+    let index = {
+        ix: null,
+        fx: null,
+        operator: null,
+        iy: null,
+        fy: null,
     }
-
+    let tempIndex = {
+        ix: null,
+        fx: null,
+        operator: null,
+        iy: null,
+        fy: null,
+    }
     let equation = {
-        operator : calc[operatorIndex],
-        x : callX(operatorIndex),
-        y : callY(operatorIndex),
-        result : null,
+        x: null,
+        operator: null,
+        y: null,
+        result: null,
     }
 
-    equation.result = calculate(equation.operator,equation.x,equation.y);
+    while (calc.length > 1){
 
+        setIndex(index, calc);
+        tempCalc = calc.slice(index.ix,index.fy+1);
+        setIndex(tempIndex, tempCalc);
+
+        equation.operator = tempCalc[tempIndex.operator];
+        equation.x = callX(tempIndex.ix,tempIndex.fx,tempCalc);
+        equation.y = callY(tempIndex.iy,tempIndex.fy,tempCalc);
+        equation.result = calculate(equation.operator,equation.x,equation.y);
+
+        updateArr(calc,equation.result,index.ix,index.fy);
+    }
     displayResult(equation.result);
 }
-/*
-    * revisar objeto index
-    * deve ser individual ou pertencer à alguma função?
-*/
-let index = {
-    ix: null,
-    operator: null,
-    fy: null,
-}
 
-function indexFinder(){
-    
-    for(i=0; i < calc.length; i++){
+function setIndex(obj,arr){
 
-        switch(typeFinder(calc[i])){
-            case "operation":
-                if (index.operator == null){
-                    index.operator = i;
-                } else if (index.operator != null && index.fy == null){
-                    index.fy = i-1;
-                }
-                break;
-            case "number":
-                if (index.ix == null){
-                    index.ix = i;
-                }
-                if (i == (calc.length-1) && index.fy == null){
-                    index.fy = i;
-                }
-                break;
+    obj.operator = selectOperatorPosition(arr);
+    obj.fx = (obj.operator-1);
+    obj.iy = (obj.operator+1);
+
+    for (i = obj.fx; i>=0 ;i--){
+        if (typeFinder(arr[i])=="number"){
+            obj.ix = i;
+        } else {
+            i = -1;
         }
     }
-    console.log(index);
+    for (i = obj.iy; i <arr.length ;i++){
+        if (typeFinder(arr[i])=="number"){
+            obj.fy = i;
+        } else {
+            i = arr.length;
+        }
+    }
 }
 
-/*
-    * update calc remove os valores calculados
-    * insere o resultado do calculo no array
-*/
+function selectOperatorPosition(arr){
+    let operatorPosition = null;
+    for(i=0;i<arr.length;i++){
+        if (typeFinder(arr[i]) == "operation"){
 
-function updateCalc(){
-    calc.splice(index.ix,((index.fy-index.ix)+1))
-} 
+            if (operatorPosition != null){
+                if ( operatorsPrecedence(arr[i]) < operatorsPrecedence(arr[operatorPosition]) ){
+                operatorPosition = i;
+                }
+            } else {
+                operatorPosition = i;
+            }
+        }
+    }
+    return operatorPosition;
+}
 
-function callX(operatorIndex){
+function operatorsPrecedence(operator){
+    let precedence;
+    switch(operator){
+        case '*':
+        case '/':
+            precedence = 1;
+            break;
+        case '+':
+        case '-':
+            precedence = 2;
+            break;
+    }
+    return precedence;
+}
+
+function callX(initial,final,arr){
     let x = "";
-    for(i=0; i <operatorIndex; i++){
-        x += calc[i];
+    for(i = initial; i <= final; i++){
+        x += arr[i];
     }
     x = parseFloat(x);
     return x;
 }
 
-function callY(operatorIndex){
+function callY(initial,final,arr){
     let y = "";
-    for(i = operatorIndex+1; i <= calc.length; i++){
-        y += calc[i];
+    for(i = initial; i <= final; i++){
+        y += arr[i];
     }
     y = parseFloat(y);
     return y;
@@ -145,9 +158,6 @@ function calculate(operator,x,y){
         case '/':
             result = divide(x,y);
             return result;
-        /*case '%':
-            result = percent(x,y);
-            return result;*/
     }
 }
 
@@ -171,8 +181,3 @@ function multiply(x,y){
 function divide(x,y){
     return x / y;
 }
-
-/*
-function percent(x,y){
-}
-*/
