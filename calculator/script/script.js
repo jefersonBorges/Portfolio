@@ -32,6 +32,28 @@ function typeFinder(n){
     }
 }
 
+function checkEntryErrors(){
+    let first = calc[0];
+    let last = calc[(calc.length-1)];
+
+    if(typeFinder(first)!="number"){
+        return true;
+    }
+    if((typeFinder(last)!="number")){
+        return true;
+    }
+
+    for(i=0; i < calc.length; i++){
+        if(typeFinder(calc[i])=="operation"){
+            if(typeFinder(calc[++i])=="operation"){
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
 function equals(){
 
     let index = {
@@ -55,18 +77,22 @@ function equals(){
         result: null,
     }
 
-    while (calc.length > 1){
+    if(!checkEntryErrors()){
+        while (calc.length > 1){
 
-        setIndex(index, calc);
-        tempCalc = calc.slice(index.ix,index.fy+1);
-        setIndex(tempIndex, tempCalc);
-
-        equation.operator = tempCalc[tempIndex.operator];
-        equation.x = callX(tempIndex.ix,tempIndex.fx,tempCalc);
-        equation.y = callY(tempIndex.iy,tempIndex.fy,tempCalc);
-        equation.result = calculate(equation.operator,equation.x,equation.y);
-
-        updateArr(calc,equation.result,index.ix,index.fy);
+            setIndex(index, calc);
+            tempCalc = calc.slice(index.ix,index.fy+1);
+            setIndex(tempIndex, tempCalc);
+    
+            equation.operator = tempCalc[tempIndex.operator];
+            equation.x = callX(tempIndex.ix,tempIndex.fx,tempCalc);
+            equation.y = callY(tempIndex.iy,tempIndex.fy,tempCalc);
+            equation.result = calculate(equation.operator,equation.x,equation.y);
+    
+            updateArr(calc,equation.result,index.ix,index.fy);
+        }
+    } else {
+        equation.result = "ENTRY ERROR"
     }
     displayResult(equation.result);
 }
