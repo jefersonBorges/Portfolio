@@ -1,4 +1,4 @@
-/*Next: check for entry errors*/
+/*Next: insert signal change (-+)*/
 let screen = 0;
 let calc = [];
 let tempCalc = [];
@@ -18,6 +18,9 @@ function updateArr(arr, result, initial, final){
 
 function displayResult(result){
     screen.innerHTML = result;
+}
+function changeSign(){
+
 }
 
 function typeFinder(n){
