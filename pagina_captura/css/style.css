@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-image: url('/img/background.png');
+    background-attachment: local;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    margin: 20px;
+}
+.content h2{
+    text-transform: capitalize;
+    font-weight: 700;
+    text-align: center;
+}
+.content h3{
+    text-transform: lowercase;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.capturePage{
+    display: flex;
+    flex-direction: column;
+}
+.capturePage input, .capturePage .submitButton{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+}
+.capturePage input:focus{
+    outline: none;
+    box-shadow: #007bff 0 0 3px 1px;
+}
+.submitButton{
+    background: #007bff;
+    color: aliceblue;
+}
+.submitButton:hover{
+    background: #004794;
+}
+.checkBox{
+    display: block;
+    cursor: pointer;
+    position: relative;
+    font-style: italic;
+    font-size: 12pt;
+    padding: 10px 10px 10px 40px;
+    user-select: none;
+    text-align: center;
+}
+.checkBox input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.checkBox .box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    margin: 10px 0 10px 10px;
+    border-radius: 5px;
+    background: aliceblue;
+}
+.checkBox:hover>.box{
+    background: #ccc;
+}
+.checkBox input:checked ~ .box{
+    background: #007bff;
+}
+.checkBox input:checked ~ .box::after{
+    content: "";
+    width: 7px;
+    height: 12px;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    border: solid aliceblue;
+    border-width: 0 3px 3px 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transform: rotate(45deg);
+}

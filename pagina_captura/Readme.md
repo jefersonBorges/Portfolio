@@ -1,0 +1,1 @@
+This is a simple capture page using only HTML5 and CSS3.
