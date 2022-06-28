@@ -1,1 +1,1 @@
-Projetos paraq demonstração das minhas habilidades técnicas.
+Projetos para demonstração das minhas habilidades técnicas.
