@@ -1,0 +1,42 @@
+/************
+*   MENU    *
+************/
+.menu-box{
+    flex-wrap: wrap;
+}
+.products-box{
+    background-color: var(--color-light-primary-transparency-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+    height: 200px;
+}
+.products-box .img-box{
+    width: 45%;
+    height: 100%;
+}
+.menu-box .products-box .img-box img{
+    width: 100%;
+    height: 200px;
+}
+.menu-box .products-box .list-box{
+    width: 55%;
+    height: 100%;
+    padding: 20px;
+}
+.menu-box .products-box .list-box h2{
+    text-align: right;
+    height: 25%;
+}
+.menu-box .products-box .list-box .prices-table{
+    width: 100%;
+    height: 75%;
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-tertiary);
+    font-weight: var(--font-weight-secondary);
+}
+.menu-box .products-box .list-box .prices-table .dotted{
+    width: 30%;
+    border-bottom: dotted 2px var(--color-dark-primary);
+}

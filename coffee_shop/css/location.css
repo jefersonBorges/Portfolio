@@ -1,0 +1,23 @@
+.location .page{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.location .content{
+    width: 60%;
+    flex-direction: column;
+}
+.address{
+    border: 1px solid white;
+    width: 100%;
+    height: 200px;
+}
+.map{
+    border: 1px solid white;
+    width: 100%;
+    height: 200px;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+}

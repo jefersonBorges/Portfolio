@@ -1,0 +1,69 @@
+/*************
+*   CONTACT  *
+*************/
+
+.contact .content{
+    justify-content: center;
+}
+.contact-form{
+    background-color: var(--color-dark-primary-transparency-primary);
+    padding: 40px;
+    border-radius: 40px;
+    width: 600px;
+}
+.contact-form .form-data{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.contact-form label{
+    font-family: var(--font-secondary);
+    color: var(--color-light-primary);
+    font-size: var(--font-size-secondary);
+    font-weight: var(--font-weight-secondary);
+    margin-bottom: 8px;
+}
+.contact-form .legend-title{
+    text-align: center;
+    font-family: var(--font-primary);
+    color: var(--color-light-primary);
+    font-size: 30px;
+    font-weight: var(--font-weight-secondary);
+    margin-bottom: 15px;
+}
+.input-info,
+.contact-form textarea{
+    background-color: var(--color-light-primary);
+    font-family: var(--font-secondary);
+    color: var(--color-dark-primary);
+    font-size: var(--font-size-secondary);
+    font-weight: var(--font-weight-secondary);
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    border: none;
+    resize: none;
+    outline: none;
+}
+.contact-form .input-info{
+    height: 40px;
+}
+.form-center{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+.form-center label{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.button{
+    margin-top: 7px;
+}

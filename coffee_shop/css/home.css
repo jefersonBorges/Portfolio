@@ -1,0 +1,57 @@
+/**********
+*   HOME  *
+**********/
+
+.home article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home article .slide-image-container{
+    width: var(--width-image-slide);
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+.home article .slide-image-container .image-container{
+    width: calc(3*var(--width-image-slide));
+    height: 100%;
+    position: relative;
+    animation-name: image-scroll-left;
+    animation-duration: var(--animation-duration-home);
+    animation-delay: var(--animation-delay-home);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.home article .slide-image-container .image-container .image{
+    width: var(--width-image-slide);
+    height: 100%;
+    float: left;
+}
+.home article .slide-information-container{
+    width: var(--width-information-slide);
+    height: 100%;
+    overflow: hidden;
+}
+.home article .slide-information-container .information-container{
+    width: calc(3*var(--width-information-slide));
+    height: 100%;
+    position: relative;
+    animation-name: information-scroll-left;
+    animation-duration: var(--animation-duration-home);
+    animation-delay: var(--animation-delay-home);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.home article .slide-information-container .information-container .information{
+    float: left;
+    width: var(--width-information-slide);
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; 
+}

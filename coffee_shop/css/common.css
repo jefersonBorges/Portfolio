@@ -1,0 +1,201 @@
+:root{
+    --font-primary: 'League Gothic', sans-serif;
+    --font-secondary: 'Poiret One', cursive;
+
+    --font-size-primary: 25px;
+    --font-size-secondary: 20px;
+    --font-size-tertiary: 15px;
+
+    --letter-spacing-primary: 3px;
+    --letter-spacing-secondary: 2px;
+
+    --line-height-secondary: 1.5;
+    --line-height-primary: 1.8;
+
+    --text-transform-primary: uppercase;
+    --text-transform-secondary: capitalize;
+
+    --font-weight-primary: bolder;
+    --font-weight-secondary: bold;
+
+    --color-light-primary: #c5b79b;
+    --color-dark-primary: #281e17;
+
+    --color-light-secondary: #af9e7f;
+    --color-dark-secondary: #584431;
+
+    --color-medium-primary: #8b7557;
+
+    --color-dark-primary-transparency-primary:#281e17cc; 
+    --color-light-primary-transparency-primary:#c5b79bcc;
+    --color-light-primary-transparency-secondary:#c5b79b99;
+
+    --max-width: 1200px;
+
+    --height-header:18vh;
+
+    --width-information-slide: 360px;
+    --width-image-slide: 800px;
+
+    --animation-duration-home: 20000ms;
+    --animation-delay-home: 1000ms;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-secondary);
+    font-size: var(--font-size-secondary);
+    line-height: var(--line-height-primary);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1, h2{
+    font-family: var(--font-primary);
+    color: var(--color-dark-primary);
+    font-size: var(--font-size-primary);
+    line-height: var(--line-height-primary);
+}
+h1{
+    font-weight: var(--font-weight-primary);
+    text-transform: var(--text-transform-primary);
+}
+h2{
+    font-weight: var(--font-weight-secondary);
+    text-transform: var(--text-transform-secondary);
+}
+.container{
+    width: 100%;
+    max-width: var(--max-width);
+    height: 100%;
+}
+.page{
+    padding-top: calc(40px + var(--height-header));
+    padding-bottom: 40px;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/************
+*   HEADER  *
+************/
+
+.header{
+    width: 100%;
+    height: var(--height-header);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    background-image: none;
+    background-color: var(--color-light-primary-transparency-primary);
+    box-shadow: var(--color-dark-primary) 0px 2px 12px 3px;
+}
+
+/**********
+*   HOME  *
+**********/
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/1-home/home-background.jpg);
+    background-attachment: fixed;
+    background-position: top left;
+    background-size:auto;
+}
+
+/**************
+*   PRODUCTS  *
+**************/
+
+.products{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/2-products/products-background.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/**********
+*   MENU  *
+**********/
+
+.menu{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/3-menu/menu-background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/*************
+*   GALLERY  *
+*************/
+
+.gallery{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/4-gallery/gallery-background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/*************
+*   CONTACT  *
+*************/
+
+.contact{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/5-contact/contact-background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/**************
+*   LOCATION  *
+**************/
+
+.location{
+    background-image: url(../img/6-location/location-background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

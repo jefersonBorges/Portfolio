@@ -1,0 +1,28 @@
+/**************
+*   PRODUCTS  *
+**************/
+
+.product-container{
+    height: 70vh;
+    width: 28%;
+    background-color: var(--color-light-primary-transparency-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.product-container:nth-child(even){
+    flex-direction: column-reverse;
+}
+.product-container .product-information{
+    height: 50%;
+    width: 100%;
+    padding: 10%;
+}
+.product-container .product-image{
+    height: 50%;
+    width: 100%;
+}
+.product-container .product-image img{
+    height: 100%;
+    width: 100%;
+}
