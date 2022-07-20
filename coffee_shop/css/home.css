@@ -2,6 +2,17 @@
 *   HOME  *
 **********/
 
+.home{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/1-home/home-background.jpg);
+    background-attachment: fixed;
+    background-position: top left;
+    background-size:auto;
+}
 .home article{
     display: flex;
     justify-content: center;

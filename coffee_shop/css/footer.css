@@ -1,7 +1,14 @@
 /************
 *   FOOTER  *
 ************/
+
 .footer{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--color-dark-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: var(--color-dark-primary) 0px -2px 12px 3px;
 }
 .footer .container{
@@ -12,9 +19,9 @@
     justify-content: space-between;
     align-items: center;
 }
-.footer h3{
+.footer p{
     color: var(--color-light-primary);
-    font-size: var(--font-size-primary);
+    font-size: var(--font-size-tertiary);
 }
 .social-links{
     display: flex;

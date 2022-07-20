@@ -1,7 +1,18 @@
-/************
-*   MENU    *
-************/
+/**********
+*   MENU  *
+**********/
 
+.menu{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/3-menu/menu-background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
 .menu-box{
     flex-wrap: wrap;
 }

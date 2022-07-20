@@ -2,6 +2,17 @@
 *   PRODUCTS  *
 **************/
 
+.products{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/2-products/products-background.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
 .product-container{
     height: 70vh;
     width: 28%;
