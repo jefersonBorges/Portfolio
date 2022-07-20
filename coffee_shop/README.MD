@@ -6,6 +6,7 @@ Concepts:
 -Image Slider;
 -Parallax background;
 -Flexbox;
+-Grid;
 -Responsiveness;
 
 
@@ -20,7 +21,7 @@ Header - Menu - navigation bar
     -Menu
     -Galeria: our space photos
     -Contact: form
-    -Location: map
+    -About: map & About-us
 Page - Home
     -scrolling photos
     -scrolling messages
@@ -43,9 +44,12 @@ Page - Gallery
         -People
 Page - Contact
     -Contact form
-Page - Location
+    -Contact info
+Page - About
     -map
-    -Phone, whats, mail, instagram
+    -about-us
+Footer
+    -Social links
 
 **Styles**
 Fonts
