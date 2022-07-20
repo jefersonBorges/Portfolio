@@ -1,6 +1,7 @@
 /************
 *   MENU    *
 ************/
+
 .menu-box{
     flex-wrap: wrap;
 }
@@ -11,6 +12,9 @@
     align-items: center;
     width: 550px;
     height: 200px;
+}
+.products-box:nth-child(3), .products-box:nth-child(4){
+    margin-top: 60px;
 }
 .products-box .img-box{
     width: 45%;

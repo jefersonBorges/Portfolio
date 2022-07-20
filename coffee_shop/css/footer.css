@@ -1,0 +1,24 @@
+/************
+*   FOOTER  *
+************/
+.footer{
+    box-shadow: var(--color-dark-primary) 0px -2px 12px 3px;
+}
+.footer .container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 800px;
+}
+.social-links img{
+    height: 20px;
+}
